@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+
+@theme {
+  /* colors */
+  --color-white: #fff;
+  --color-1f: #1F2E55;
+  --color-71: #717FA6;
+  --color-38: #382AE1;
+  --color-bg: #D6E1FF;
+  --color-f7: #F7F9FF;
+  --color-76: #766CF1;
+
+  /* fonts */
+  --default-font-family: "Red Hat Display", sans-serif;
+}
+
+@layer base {
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/red-hat-display-v20-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/red-hat-display-v20-latin-700.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./assets/fonts/red-hat-display-v20-latin-900.woff2') format('woff2');
+  }
+
+  body {
+    @apply mt-5 flex items-center justify-center font-normal leading-[1] text-71;
+    background-image: url("./assets/images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: hsl(225, 100%, 94%);
+  }
+
+}
+
+@layer components {}
+
+@layer utilities {
+  .container {
+    @apply w-full max-w-[450px] px-12 mx-auto;
+  }
+}
